@@ -1,0 +1,105 @@
+ 
+ 
+<view class="myCenterTop">
+   
+    <image style="border-radius:100rpx;" class="myCenter_pic" src="{{personInfo.avatarUrl}}"></image>
+    <view class="myCenter_info">
+          <view class="myCenter_name">{{personInfo.nickName}} </view>
+          <view class="myCenter_name_desc">虽然没挣到钱，但在这里开心就好</view>
+    </view>
+    <view class="clearfix"></view>
+</view>
+<navigator url="myCenter_yuyue" hover-class='comm_hover'>
+
+<!-- <view class="myCenter_item_row">
+  <i class="icon iconfont icon-yuyuedingdan icons fl"></i>
+  我的预约<i class="icon iconfont icon-more more fr"></i>
+  <view class="descLabel">预约的车辆信息</view>
+</view> -->
+</navigator>
+<navigator  url="myCenter_car" hover-class='comm_hover'>
+<view class="myCenter_item_row">
+  <i class="icon iconfont icon-zuche icons fl"></i>
+  我是车主<i class="icon iconfont icon-more more fr"></i>
+  <view class="descLabel">发布的车辆信息</view>
+</view>
+</navigator>
+<navigator url="myCenter_passenger"  hover-class='comm_hover'>
+<view class="myCenter_item_row">
+  <i class="icon iconfont icon-account icons fl"></i>
+  我是乘客<i class="icon iconfont icon-more more fr"></i>
+  <view class="descLabel">发布的乘客信息</view>
+</view>
+</navigator>
+<view class="myCenter_about">
+      <view class="myCenter_about_title">关于我们</view>
+      <view class="myCenter_about_desc">
+            老乡拼车致力于给各位老乡提供海量的车辆行程信息，本服务永久免费,请放心使用。<button plain="true" style="display:inline; font-size:30rpx; margin:0;padding:0; border:0;  color:#61778E;"   open-type="contact">联系我们</button>
+      </view>
+</view>
+
+<!-- <view class="my_list clearfix">
+         
+           
+               
+              <view class="my_item">
+               <i class="icon iconfont icon-edit" style=""></i>发布记录
+              </view>
+
+    </view>
+
+    <navigator url="/page/adrinfo?title=navigate"  hover-class='none'>
+                        <view class="carinfo my_car" >
+
+                              <view>
+                                <i class="icon iconfont icon-mudedi from"></i><span  class="sm">从</span> <span>史各庄</span>
+                              </view>
+                              <view>
+                                <i class="icon iconfont icon-huodongxiangqu1 to"></i><span  class="sm">到</span> <span>巨鹿</span>
+                              </view>
+                              <view>
+                                <i class="icon iconfont icon-xiangqing to"></i><span  class="sm">途径北京大兴巨鹿南宫，直达太远</span>  
+                              </view>
+                              <view>
+                                <i class="icon iconfont icon-xuanzuo car "></i>可乘坐2人  <span class="chuxtime_bz">每天往返</span>  <span class="sm">轿车</span>
+                              </view>
+                              <view>
+                               <span class="chuxtime" style="background:#00A500;margin-right:5rpx;">车找人</span> <span class="chuxtime">出行时间</span> 2017-12-14 10:00
+                              </view>
+                      
+                               
+                              <view class="carline"></view>
+                             
+                        
+                        </view>
+   </navigator>
+
+
+
+
+
+    <navigator url="/page/passenger?title=navigate" hover-class='none'>
+            <view class="carinfo my_car">
+                  <view>
+                   <i class="icon iconfont icon-dangdiwanle1 to"></i>
+                    <span  class="sm">从</span> <span>巨鹿</span>
+                  </view>
+                  <view>
+                    <i class="icon iconfont icon-mudedi to"></i><span  class="sm">到</span> <span>巨鹿</span>
+                  </view>
+
+                  <view>
+                    <i class="icon iconfont icon-wode car"></i>5人
+                  </view>
+                  <view>
+                    <span class="chuxtime" style="background:#00A500;margin-right:5rpx;">人找车</span><span class="chuxtime">出行时间</span> 2017-12-14 10:00
+                  </view>
+
+                  <view>
+                    <i class="icon iconfont icon-xiangqing to"></i><span  class="sm">有行李，请注意</span>  
+                  </view>
+                  
+                  <view class="carline"></view>
+            
+            </view>
+</navigator> -->

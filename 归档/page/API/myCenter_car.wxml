@@ -1,0 +1,115 @@
+<!--page/API/myCenter_car.wxml-->
+<view class="myCar_content">
+<view class="yuyue_waper" wx:for="{{myinfoList}}" wx:key = 'idx' wx:for-item="item">  
+              <navigator url="/page/adrinfo?id={{item.id}}"  hover-class='comm_hover'>
+                    
+                                  <view class="carinfo my_car myCenter_car_item" >
+
+                                        <view>
+                                          <i class="icon iconfont icon-mudedi from"></i><span  class="sm">从</span> <span>{{item.goName}}</span>
+                                        </view>
+                                        <view>
+                                          <i class="icon iconfont icon-huodongxiangqu1 to"></i><span  class="sm">到</span> <span>{{item.toName}}</span>
+                                        </view>
+                                        <view wx:if="item.remark">
+                                          <i class="icon iconfont icon-xiangqing to"></i><span  class="sm">{{item.remark}}</span>  
+                                        </view>
+                                        <view>
+                                          <!-- <i class="icon iconfont icon-xuanzuo car "></i>可乘坐2人  <span class="chuxtime_bz">每天往返</span>  -->
+                                           <span class="sm">{{item.carType}}</span>
+                                        </view>
+                                        <view>
+                                        <span class="chuxtime" style="background:#00A500;margin-right:5rpx;">车找人</span> <span class="chuxtime">出行时间</span>{{item.goDate}} {{item.goTime}}
+                                        </view>
+                                
+                                        
+                                        <view class="carline"></view>
+                                      
+                                  
+                                  </view>
+            </navigator>
+
+            <!-- <view class='yuyue_action_car'>
+            <view class="yuyue_jiao"></view>
+                  <view class="yuyue_tip">已预约的乘客</view>
+                  <view class="yueyue_passenger_content" >
+                  
+                          <view class="yueyue_passenger_imgs">
+                                <image style="width:100%; height:100%;" mode='aspectFit' src="/image/quaner.jpg"></image>
+                          </view>
+                          <view class="yueyue_passenger_info">
+                                <view class="yueyue_passenger_info_title">大美巨鹿</view>
+                                <view class="yueyue_passenger_info_title_time">预约时间:2017-12-12 10:20</view>
+                          </view>
+                          <label class="passenger_callcar">拨打电话</label>
+                        
+                          <view class="clearfix"></view>
+                  </view>
+
+
+                
+
+
+
+
+                   
+            </view> -->
+
+            
+
+
+
+   </view>
+
+   <view style="text-align:center; color:#999; padding-top:20%;" class="{{myinfoList.length == 0 && doneFinish?'wxshow':'wxhide'}}">
+                <i class="icon iconfont icon-survey1" style="display:block; font-size:100rpx;"></i>暂无内容
+            </view>
+
+    <view style="text-align:center; color:#999;" class="{{!doneFinish?'wxshow':'wxhide'}}">
+                加载中...
+    </view>
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+  
+
+
+
+   
+
+   
+
+   
+
+   
+
+
+
+
+
+
+
+
+    </view>
+

@@ -1,0 +1,101 @@
+<!--page/chosetype.wxml-->
+<!-- <view class="{{showLoading?'wxshow':'wxhide'}}"><image  class="loadingImg" src='../image/loading.gif'></image></view> -->
+
+<view class="chose_content">
+   <!-- <navigator url="/page/addcar?title=navigate">
+    <button type="default"><i class="icon iconfont icon-zuche"></i>我是车主</button></navigator>
+    <navigator url="/page/addpassenger?title=navigate">
+    <button type="default"><i class="icon iconfont icon-wode"></i>我是乘客</button>
+    </navigator>  -->
+ 
+
+    <view class="sy_tab">
+          <view class="sy_col">
+              <view class="sy_tab_c {{tripsType == 0?'sy_tab_c_active':'sy_tab_c'}}" bindtap='changeTab' data-index="0">
+                 <view class="fl" style="width:20%;">
+                      <i class="icon iconfont icon-account"></i>
+                  </view>
+                 <view class="fl" style="width:80%;">
+                    <view class="title">我是乘客</view>
+                    <view class="desc">发布人找车信息</view>
+                  </view>
+                 <view class="clearfix"></view>
+              </view>
+          </view>
+          <view class="sy_col">
+              <view class="sy_tab_c {{tripsType == 1?'sy_tab_c_active':''}}" bindtap='changeTab' data-index="1">
+                  <view class="fl" style="width:20%;">
+                      <i class="icon iconfont icon-zuche"></i>
+                  </view>
+                 <view class="fl" style="width:80%;">
+                    <view class="title">我是车主</view>
+                    <view class="desc">发布车找人信息</view>
+                  </view>
+                 <view class="clearfix"></view>
+              </view>
+          </view>
+          
+    </view>
+    <view class="clearfix"></view>
+    <view class="tripContent clearfix">
+          <view class="nlines" >
+              
+              <view style="color:#CCC;" class="{{ !startInfo.address ? 'wxshow':'wxhide'}}" hover-class='comm_hover'  bindtap="chooseStartLocation">
+               <i class="icon iconfont icon-mudedi" style=""></i>从哪儿出发 
+              </view>
+              <view class="{{startInfo.address ? 'wxshow':'wxhide'}}"  hover-class='comm_hover'  bindtap="chooseStartLocation">
+               <i class="icon iconfont icon-mudedi"></i>{{startInfo.address}}
+              </view>
+               
+              
+          </view>
+          <view class="nlines" style="border:none;">
+               
+              <view style="color:#CCC;" class="{{ !endInfo.address ? 'wxshow':'wxhide'}}"   hover-class='comm_hover' bindtap="chooseEndLocation">
+               <i class="icon iconfont icon-huodongxiangqu1" style=""></i>去哪里
+              </view>
+              <view  class="{{ endInfo.address ? 'wxshow':'wxhide'}}"  hover-class='comm_hover'  bindtap="chooseEndLocation">
+               <i class="icon iconfont icon-huodongxiangqu1" style=""></i>{{endInfo.address}}
+              </view>
+
+          </view>
+          <view class="tripChange" bindtap='changePoint'><i class="icon iconfont icon-qiehuan"></i></view>
+    </view>
+
+    
+
+    <view class="fabub clearfix">
+        
+        <button type="primary" class="{{tripsType == 0?'wxshow':'wxhide'}}" bindtap='reportPassenger'  >立即找车</button>
+        <button type="primary" class="{{tripsType == 1?'wxshow':'wxhide'}}" bindtap='reportCar'  >立即找人</button>
+    </view>
+
+
+    <view class="firstTip">
+    <view wx:for="{{noticeList}}" wx:key="idx" wx:for-item="item"><i class="icon iconfont icon-yinliang"></i>{{item.title}}</view>
+
+    
+    </view>
+    <!-- <view  class="tripContent tripQuick clearfix navgiter_link">
+       <view bindtap='quicklauch' data-index='0'><i class="icon iconfont icon-zuche icon_green"></i>找车主<i class="icon iconfont icon-more fr"></i></view> 
+       <view bindtap='quicklauch' data-index='1'><i class="icon iconfont icon-account icon_green"></i>找乘客<i class="icon iconfont icon-more fr"></i></view> 
+    </view> -->
+    
+        
+     
+     
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,137 @@
+<form catchsubmit="reportCar" >
+<view class="addcars">
+   
+        <view class="weui-cell weui-cell_input add_container">
+
+
+         <view class="itemc">
+            <view class="itemc_icon"><i class="icon iconfont icon-mudedi"></i></view>
+            <view class="itemcinput"  hover-class='comm_hover' bindtap='chooseStartLocation'>
+                <view style="color:#CCC;" class="{{ !startInfo.address  ? 'wxshow':'wxhide'}}">从哪儿出发</view>
+                <view class="{{startInfo.address ? 'wxshow':'wxhide'}}">{{startInfo.address}}</view>
+            </view>
+            
+            <view class="clearfix"></view>
+          </view>
+
+          <view class="itemc">
+            <view class="itemc_icon"><i class="icon iconfont icon-huodongxiangqu1"></i></view>
+            <view class="itemcinput"  hover-class='comm_hover' bindtap='chooseEndLocation'>
+                  <view style="color:#CCC;" class="{{ !endInfo.address ? 'wxshow':'wxhide'}}"  bindtap="chooseEndLocation">
+                   去哪里
+                    </view>
+                    <view  class="{{endInfo.address != '' ? 'wxshow':'wxhide'}}"  bindtap="chooseEndLocation">
+                    {{endInfo.address}}
+                    </view>
+            </view>
+            <view class="clearfix"></view>
+          </view>
+
+          <view class="itemc">
+            <view class="itemc_icon"><i class="icon iconfont icon-rili"></i></view>
+            <view class="itemcinput"  style="width:40%;">
+               
+                    <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}" range-key="name">
+        <view class="picker ">
+         <view style="color:#808080;" class="{{(multiArray[0][multiIndex[0]].value)?'wxhide':'wxshow'}}">出发时间</view>
+         <view class="smfont {{(multiArray[0][multiIndex[0]].value)?'wxshow':'wxhide'}}">
+         {{multiArray[0][multiIndex[0]].value}}  {{multiArray[1][multiIndex[1]].value}}:{{multiArray[2][multiIndex[2]].value}}
+         </view> 
+        </view>
+      </picker>
+            </view>
+            
+
+            <view class="itemc_icon" ><i class="icon iconfont icon-xuanzuo"></i></view>
+            <view class="itemcinput" style="width:40%;"  >
+              <picker mode="selector" bindchange="bindSeatChange" value="{{seatList[seatidx]}}" range-key="name" range="{{seatList}}">
+                  <view class="weui-input {{seatList[seatidx].value == 0?'picker_tips':''}}">{{seatList[seatidx].name}}</view>
+              </picker>
+            </view>
+            
+
+            <view class="clearfix"></view>
+          </view>
+
+          
+
+          <view class="itemc">
+            <view class="itemc_icon">
+                <i class="icon iconfont icon-xiangqing to"></i>
+              </view>
+             <view class="itemcinput">
+             
+                  <picker mode="selector" bindchange="bindCarChange" value="{{carList[caridx]}}" range-key="name" range="{{carList}}">
+                      <view class="weui-input {{carList[caridx].value == 0?'picker_tips':''}}">{{carList[caridx].name}}</view>
+                  </picker>
+
+            </view>
+            <view class="clearfix"></view>
+          </view>
+
+
+           
+         
+          <view class="itemc">
+            <view class="itemc_icon">
+                <i class="icon iconfont icon-xiangqing to"></i>
+              </view>
+             <view class="itemcinput">
+             
+        <textarea   name="toAdressDesc"  placeholder="备注(选填)" style="height: 3em" />
+
+            </view>
+            <view class="clearfix"></view>
+          </view>
+          
+         
+
+        </view>
+   
+
+   
+</view>
+
+
+
+
+
+
+
+
+
+<view class="addcars">
+   
+        <view class="weui-cell weui-cell_input add_container">
+
+
+          <view class="itemc"> 
+            <view class="itemc_icon"><i class="icon iconfont icon-accountfilling"></i></view>
+            <view class="itemcinput">
+             <input class="weui-input " value="{{myUser.nickname}}"  name="userName"   placeholder="请输入姓名"/>
+            </view>
+            
+            <view class="clearfix"></view>
+          </view>
+
+          <view class="itemc">
+            <view class="itemc_icon"><i class="icon iconfont icon-xuanzhuanshouji"></i></view>
+            <view class="itemcinput">
+            <input class="weui-input "  value="{{myUser.phone}}"  name="userPhone"  placeholder="请输入手机号"/>
+            </view>
+            <view class="clearfix"></view>
+          </view>
+
+
+        </view>
+   
+
+   
+</view>
+<view class="fbbtn">
+    <button type="primary"  class="{{issubmit?'wxshow':'wxhide'}}"    form-type='submit' >发布</button>
+    <button type="primary" loading = 'true' class="{{!issubmit?'wxshow':'wxhide'}}"    form-type='submit' >正在提交...</button> 
+</view>
+</form>
+
+

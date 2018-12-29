@@ -1,0 +1,128 @@
+<!--page/API/myCenter_yuyue.wxml-->
+<view class="myCar_content">
+<view>
+              <view class='yuyue_action'>
+                  <label class="yuyue_time">预约时间:2017-12-12 10:20</label>
+                  <!-- <label class="cancle_yuyue fr">取消预约</label> -->
+                  <label class="callcar fr">拨打电话</label>
+              </view>
+              <navigator url="/page/adrinfo?title=navigate"  hover-class='comm_hover'>
+                    
+                                  <view class="carinfo my_car myCenter_car_item" >
+
+                                        <view>
+                                          <i class="icon iconfont icon-mudedi from"></i><span  class="sm">从</span> <span>史各庄</span>
+                                        </view>
+                                        <view>
+                                          <i class="icon iconfont icon-huodongxiangqu1 to"></i><span  class="sm">到</span> <span>巨鹿</span>
+                                        </view>
+                                        <view>
+                                          <i class="icon iconfont icon-xiangqing to"></i><span  class="sm">途径北京大兴巨鹿南宫，直达太远</span>  
+                                        </view>
+                                        <view>
+                                          <i class="icon iconfont icon-xuanzuo car "></i>可乘坐2人  <span class="chuxtime_bz">每天往返</span>  <span class="sm">轿车</span>
+                                        </view>
+                                        <view>
+                                        <span class="chuxtime" style="background:#00A500;margin-right:5rpx;">车找人</span> <span class="chuxtime">出行时间</span> 2017-12-14 10:00
+                                        </view>
+                                
+                                        
+                                        <view class="carline"></view>
+                                      
+                                  
+                                  </view>
+            </navigator>
+   </view>
+
+
+
+
+  <view>
+              <view class='yuyue_action'>
+                  <label class="yuyue_time">预约时间:2017-12-12 10:20</label>
+                  <!-- <label class="cancle_yuyue fr">取消预约</label> -->
+                  <label class="callcar fr">拨打电话</label>
+              </view>
+              <navigator url="/page/adrinfo?title=navigate"  hover-class='comm_hover'>
+                    
+                                  <view class="carinfo my_car myCenter_car_item" >
+
+                                        <view>
+                                          <i class="icon iconfont icon-mudedi from"></i><span  class="sm">从</span> <span>史各庄</span>
+                                        </view>
+                                        <view>
+                                          <i class="icon iconfont icon-huodongxiangqu1 to"></i><span  class="sm">到</span> <span>巨鹿</span>
+                                        </view>
+                                        <view>
+                                          <i class="icon iconfont icon-xiangqing to"></i><span  class="sm">途径北京大兴巨鹿南宫，直达太远</span>  
+                                        </view>
+                                        <view>
+                                          <i class="icon iconfont icon-xuanzuo car "></i>可乘坐2人  <span class="chuxtime_bz">每天往返</span>  <span class="sm">轿车</span>
+                                        </view>
+                                        <view>
+                                        <span class="chuxtime" style="background:#00A500;margin-right:5rpx;">车找人</span> <span class="chuxtime">出行时间</span> 2017-12-14 10:00
+                                        </view>
+                                
+                                        
+                                        <view class="carline"></view>
+                                      
+                                  
+                                  </view>
+            </navigator>
+   </view>
+
+
+
+
+   <view>
+              <view class='yuyue_action'>
+                  <label class="yuyue_time">预约时间:2017-12-12 10:20</label>
+                  <!-- <label class="cancle_yuyue fr">取消预约</label> -->
+                  <label class="callcar fr">拨打电话</label>
+              </view>
+              <navigator url="/page/adrinfo?title=navigate"  hover-class='comm_hover'>
+                    
+                                  <view class="carinfo my_car myCenter_car_item" >
+
+                                        <view>
+                                          <i class="icon iconfont icon-mudedi from"></i><span  class="sm">从</span> <span>史各庄</span>
+                                        </view>
+                                        <view>
+                                          <i class="icon iconfont icon-huodongxiangqu1 to"></i><span  class="sm">到</span> <span>巨鹿</span>
+                                        </view>
+                                        <view>
+                                          <i class="icon iconfont icon-xiangqing to"></i><span  class="sm">途径北京大兴巨鹿南宫，直达太远</span>  
+                                        </view>
+                                        <view>
+                                          <i class="icon iconfont icon-xuanzuo car "></i>可乘坐2人  <span class="chuxtime_bz">每天往返</span>  <span class="sm">轿车</span>
+                                        </view>
+                                        <view>
+                                        <span class="chuxtime" style="background:#00A500;margin-right:5rpx;">车找人</span> <span class="chuxtime">出行时间</span> 2017-12-14 10:00
+                                        </view>
+                                
+                                        
+                                        <view class="carline"></view>
+                                      
+                                  
+                                  </view>
+            </navigator>
+   </view>
+
+
+
+   
+
+   
+
+   
+
+   
+
+
+
+
+
+
+
+
+    </view>

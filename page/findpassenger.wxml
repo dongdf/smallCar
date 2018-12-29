@@ -1,0 +1,116 @@
+        <view class='tripInfo clearfix'>
+              <view class="tripItem" bindtap='chooseStartLocation'>
+                   
+
+                   <view   class="pointerTips {{ !searchQuery.startInfo.address ? 'wxshow':'wxhide'}}">从哪儿出发</view>
+                   <view class="tripc {{ searchQuery.startInfo.address ? 'wxshow':'wxhide'}}">{{searchQuery.startInfo.address}}</view>
+
+
+              </view>
+              <view class="tripIcon" bindtap='changePoint'><i class="icon iconfont icon-chaxunchufadaoda"></i></view>
+              <view  class="tripItem"  bindtap='chooseEndLocation'>
+                    
+
+                     <view   class="pointerTips {{ !searchQuery.endInfo.address  ? 'wxshow':'wxhide'}}"  >
+                      去哪里
+                    </view>
+                    <view  class="tripc {{ searchQuery.endInfo.address ? 'wxshow':'wxhide'}}">
+                      {{searchQuery.endInfo.address}}
+                     </view>
+
+
+              </view>
+              <view class="clearfix"></view>
+              <view class="timeFilter">
+             
+                    <view class="scrollName"><span>出行日期</span></view>
+                     
+                    <scroll-view class="scroll-view_H" scroll-x="true"   style="width: 100%">
+                           
+                          <view wx:for="{{filterDay}}" bindtap='selectDay' data-obj ="{{item}}" wx:key="unique"   wx:for-item="item" class="scrollItem_H {{chooseDay == item.value?'srcollItem_active':''}}">{{item.name}}</view>
+                           
+                      </scroll-view>
+                     
+               
+             </view>
+              <view class="clearfix"></view>
+        </view>
+
+
+
+
+<!-- {{showAddTips?'wxshow':'wxhide'}} -->
+<!-- 提示添加乘客信息 -->
+<view class="tipsaddbutton {{showAddTips?'wxshow':'wxhide'}}">没有合适的，点击
+<navigator hover-class='comm_hover' url='addcar?startinfo={}&endinfo={}'><a class="addcomm">添加车辆信息<i class="icon iconfont icon-more"></i></a></navigator>
+</view>
+<!-- 提示添加乘客信息 -->
+  
+  <view  style="padding-bottom:100rpx;">
+           <view class="carlist">
+
+  <view  wx:for="{{resultList}}" wx:key="idx" bindtap='bindClick' data-obj="{{item}}"  wx:for-item="item" >
+            <view class="carinfo">
+            <view class="carSign">人找车</view>
+                  <view>
+                   <i class="icon iconfont icon-dangdiwanle1 to"></i>
+                    <span  class="sm">从</span> <span>{{item.goName}}</span>
+                  </view>
+                  <view class="smallAdr">{{item.goAddress}}</view>
+                  <view>
+                    <i class="icon iconfont icon-mudedi to"></i><span  class="sm">到</span> <span>{{item.toName}}</span>
+                  </view>
+                  <view class="smallAdr">{{item.toAddress}}</view>
+
+                  <view>
+                    <i class="icon iconfont icon-wode car"></i><span  class="sm">人数</span>{{item.allNum}}人
+                  </view>
+                  <view>
+                    <span class="chuxtime">出行时间</span>  {{item.goDate}} {{item.goTime }}
+                  </view>
+
+                  <view wx:if="{{item.remark}}">
+                    <i class="icon iconfont icon-xiangqing to"></i><span  class="sm">{{item.remark}}</span>  
+                  </view>
+                  
+                   
+                 
+                  <view class="tel" data-index="tel"  data-tel="{{item.phone}}">
+                    <i class="icon iconfont icon-dianhua bigtel"></i>拨号
+                  </view>
+                  <view class="carline"></view>
+            
+            </view>
+            <!-- <view class="car_foot">
+                      <view class="fl">
+                       董登发
+                       </view>
+                      <view class="fr">距离您 14km</view>
+                      <view class="clearfix"></view>
+            </view> -->
+</view>
+
+
+
+
+
+
+<view style="text-align:center; color:#999; padding-top:20%;" class="{{resultList.length == 0 && doneFinish?'wxshow':'wxhide'}}">
+    <i class="icon iconfont icon-survey1" style="display:block; font-size:100rpx;"></i>暂无内容
+</view>
+
+
+
+           
+<view class="weui-loadmore {{isHideLoadMore?'wxshow':'wxhide'}}"  >
+    正在加载... 
+</view>
+      
+
+      
+     
+   
+  </view>
+
+   
+</view>

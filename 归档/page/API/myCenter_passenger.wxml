@@ -1,0 +1,40 @@
+<!--page/API/myCenter_passenger.wxml-->
+<view class="myCar_content">
+<view  wx:for="{{myinfoList}}" wx:key = 'idx' wx:for-item="item">
+    <navigator url="/page/passenger?id={{item.id}}" hover-class='comm_hover'>
+                <view class="carinfo my_car myCenter_car_item">
+                      <view>
+                      <i class="icon iconfont icon-dangdiwanle1 to"></i>
+                        <span  class="sm">从</span> <span>{{item.goName}}</span>
+                      </view>
+                      <view>
+                        <i class="icon iconfont icon-mudedi to"></i><span  class="sm">到</span> <span>{{item.toName}}</span>
+                      </view>
+
+                      <view>
+                        <i class="icon iconfont icon-wode car"></i>{{item.allNum}}人
+                      </view>
+                      <view>
+                        <span class="chuxtime" style="background:#00A500;margin-right:5rpx;">人找车</span><span class="chuxtime">出行时间</span> {{item.goDate}} {{item.goTime}}
+                      </view>
+
+                      <view wx:if="item.remark">
+                        <i class="icon iconfont icon-xiangqing to"></i><span  class="sm">{{item.remark}}</span>  
+                      </view>
+                      
+                      <view class="carline"></view>
+                
+                </view>
+    </navigator>
+ </view>
+  
+<view style="text-align:center; color:#999; padding-top:20%;" class="{{myinfoList.length == 0 && doneFinish?'wxshow':'wxhide'}}">
+    <i class="icon iconfont icon-survey1" style="display:block; font-size:100rpx;"></i>暂无内容
+</view>
+
+<view style="text-align:center; color:#999;" class="{{!doneFinish?'wxshow':'wxhide'}}">
+    加载中...
+</view>
+
+
+</view>

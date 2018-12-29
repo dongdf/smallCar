@@ -1,0 +1,45 @@
+/* page/passenger.wxss */
+/* page/adrinfo.wxss */
+@import "common/index.wxss";
+@import "common/lib/iconfont.wxss";
+.adrinfo_top{background:#FFF;}
+
+ .carinfo_detail  { top:0rpx; padding:15rpx;   display: inline-block; 
+}
+
+.carinfo_detail span.sm {
+  color: #999;
+   
+}
+.carinfo_detail span.pointer {
+  color: #FFF;
+  background: #00A500;
+  
+  border-radius: 5rpx;
+  padding:0 5rpx;
+  margin-right:5rpx;
+}
+.carinfo_detail span.adrinfo_detail {}
+.paddingb{border-bottom:1px solid #EEE; padding:20rpx 0;}
+ 
+ .adrinfo_mark_title {font-size:25rpx; color:#666; padding:10rpx 15rpx;}
+ .adrinfo_mark {background:#FFF; padding:15rpx;}
+ .adrinfo_mark_pub_info{color:#999; background:#FFF; padding:5rpx 15rpx;  }
+ .fixed_bottom { position: absolute; width:100%; bottom:0;left:0; height:90rpx;   background:#FFF;}
+ .fixed_bottom_c {padding:15rpx;}
+.flex-wrp{
+  
+  display:flex;
+}
+.flex-item{
+  width: 100%;
+  height: 90rpx;
+   
+  text-align:center;
+  border-left:1px solid #EEE;
+}
+
+.info_sm {  line-height: 90rpx;}
+ 
+.info_sm_btn { background: #00A500;   color:#FFF;}
+ 

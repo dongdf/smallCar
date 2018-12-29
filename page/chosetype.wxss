@@ -1,0 +1,3 @@
+/* page/chosetype.wxss */
+@import "common/lib/iconfont.wxss";
+@import "../page/common/index.wxss";

@@ -1,0 +1,129 @@
+<!--page/adrinfo.wxml-->
+<view class="comm_con">
+<view class="adrinfo_top">
+
+<view class="carinfo_detail" style='display:block;'>
+                  <view class="paddingb">
+                     <i class="icon iconfont icon-zuche car "></i> {{reInfo.goDate}} {{reInfo.goTime}}  <span class="sm">{{reInfo.carType}}</span>
+                  </view>
+                  <view  class="paddingb">
+                    <i class="icon iconfont icon-xuanzuo car "></i>可乘坐{{reInfo.allNum}}人  
+                  </view>
+                  <view class=" paddingb">
+                    <span  class="sm pointer">从</span> <span class="adrinfo_detail">{{reInfo.goName}}</span>
+                     <view class="smallAdr">{{reInfo.goAddress}}</view>
+                  </view>
+                  <view class=" paddingb" style="border:none;">
+                    <span  class="sm pointer">到</span> <span class="adrinfo_detail">{{reInfo.toName}}</span>
+                     <view class="smallAdr">{{reInfo.toAddress}}</view>
+                  </view>
+                 
+                
+                  
+                  
+            
+ </view>
+ </view>
+  <view class="map_nav boxshadow " hover-class='view_hover' bindtap='daohang' >
+                        <i class="icon iconfont icon-daohang"></i> 导航
+  </view>
+ <view class="boxshadow">
+    <view class='adrinfo_mark_title'><i class="icon iconfont icon-xiangqing to"></i>备注消息</view>
+    <view class="adrinfo_mark">{{reInfo.remark}}</view>
+    <view class="adrinfo_mark_pub_info">发布时间:{{ztime}}</view>
+ </view>
+  
+<!-- <view class="laoxiang_item" style="margin:0; margin-top:25rpx;">
+      <view class="laoxiang_item_pic">
+            <image class="laoxiang_item_pic" mode='aspectFit' src="../image/quaner6.jpg"></image>
+      </view>
+      <view class="laoxiang_item_info">
+            <view class="laoxiang_item_info_title">董登发</view>
+            <view class="laoxiang_item_info_desc">已预约23939人</view>
+      </view>
+      <view class="laoxiang_item_add yuebtn_color" hover-class='comm_hover' bindtap='yueta' >约一下</view> 
+      <view class="clearfix"></view>
+</view> -->
+       
+       
+      <view  style=" padding:20rpx; margin-top:40rpx; text-align:center;">
+         <view class="{{productIng?'wxshow':'wxhide'}}"> <button bindtap='makepic'  class="mini-btn" type="primary" size="mini" >生成精美展图</button></view> 
+         <view class="{{productIng?'wxhide':'wxshow'}}"> <button class="mini-btn" loading="true" type="primary" size="mini" >生成精美展图</button></view>
+      </view>
+      <view bindtap='gotoreport' class="repoortMsg">不合适？去发布人找车</view>
+ 
+     
+    
+ </view>     
+ 
+<view class="fixed_bottom">
+      <view class="flex-wrp" style="flex-direction:row;">
+          <view class="flex-item">
+          <button plain = "true" style="margin:0;padding:0;border:0; border-radius:0" open-type="share">
+            <view class="info_sm" open-type="share" ><i class="icon iconfont icon-fenxiang info_sm_icon"></i><span>转发</span></view>
+          </button>
+              
+               
+          </view>
+          <!-- <view class="flex-item">
+              <view  class="info_sm"><i class="icon iconfont icon-xihuan1 info_sm_icon"></i><span>收藏</span></view>
+          </view> -->
+          <view class="flex-item">
+          <button plain = "true" style="margin:0;padding:0;border:0;  border-radius:0" bindtap='calltelphone'  >
+              <view  class="info_sm info_sm_btn "><i class="icon iconfont icon-dianhua info_sm_icon"></i><span>拨打电话</span></view>
+              </button>
+          </view>
+        </view>
+
+     
+</view>
+
+
+<!-- 确定预约信息 -->
+ <view class="yuyueinfo" animation="{{animation}}">
+    <view class="yuyueinfo_content">
+        <view class="yuyueinfo_title">提示
+          <view class="fr" bindtap='yueclose'><i bindtip="yueclose" class="icon iconfont icon-close "></i></view>
+        </view>
+        <view class="yuyueinfo_title_info">
+              您要预约2017-12-22 20:29的这个车吗？
+        </view>
+<form catchsubmit="yueCar" >
+        <view class="addcars">
+   
+                  <view class="weui-cell weui-cell_input add_container">
+
+
+                    <view class="itemc">
+                      <view class="itemc_icon"><i class="icon iconfont icon-accountfilling"></i></view>
+                      <view class="itemcinput">
+                      <input class="weui-input "  name="userName"   placeholder="请输入姓名"/>
+                      </view>
+                      
+                      <view class="clearfix"></view>
+                    </view>
+
+                    <view class="itemc">
+                      <view class="itemc_icon"><i class="icon iconfont icon-xuanzhuanshouji"></i></view>
+                      <view class="itemcinput">
+                      <input class="weui-input "   name="userPhone"  placeholder="请输入手机号"/>
+                      </view>
+                      <view class="clearfix"></view>
+                    </view>
+
+
+                  </view>
+            
+
+            
+          </view>
+          <view class="fbbtn">
+              <button type="primary" bindtap='reportCar'  form-type='submit' >预约此车</button>
+          </view>
+</form>
+
+
+    </view>
+      
+ </view>
+<!-- 确定预约信息 -->
